@@ -37,7 +37,7 @@ var upperCase = [];
 
 function generatePassword() {
   var password = "";
-  var passwordLength = prompt("How long would you like your password to be?");
+  var passwordLength = prompt("How long would you like your password to be?", "Must be between 8-128 Characters");
   console.log(passwordLength);
   var uppercaseConfirm = confirm("Do you want uppercase letters?");
   console.log(uppercaseConfirm);
@@ -56,18 +56,18 @@ function generatePassword() {
     if (specialChars) {
       password += possibleChars;
     }
-  } else if (length < 8) {
+  } else if (passwordLength < 8) {
     alert("The length is too short.");
-    generatePassword();
-  } else if (length > 128) {
+  } else if (passwordLength > 128) {
     alert("The length is too long.");
-    generatePassword();
   } else {
-    generatePassword();
   alert("Length is not validated as a number.")
-    generatePassword();
   }
+
+return password;
 }
+generatePassword()
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
