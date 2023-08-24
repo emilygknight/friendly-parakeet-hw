@@ -29,27 +29,39 @@ THEN the password is either displayed in an alert or written to the page
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-var password = ["8 chars", ""]
+var possibleChars = []
 // var userInput = window.prompt("Enter You Password Below");
 
 function generatePassword() {
-  confirm("Please use one uppercase, at least 8 characters and one symbol!");
-  var password = prompt("Enter you password below", "Enter password here");
+  var password = ""
+  var passwordLength = prompt("How long would you like your password to be?");
+  console.log(passwordLength);
+  var uppercaseConfirm = confirm("Do you want uppercase letters?");
+  console.log(uppercaseConfirm);
+  var lowercaseConfirm = confirm("Do you want lower case letters?");
+  console.log(lowercaseConfirm);
+  var specialChars = confirm("Would you like to use any special characters?")
+  console.log(specialChars);
 
-  if (password >=8 && password <= 128) {
-    alert = ("That password works");
-  console.log("That password works!");
-  } else {
-  alert = ("Please try a different password")
-  console.log("Try again")
-  }
-//
-
-//
-
-//
-
-  return password;
+  if (passwordLength >=8 && passwordLength <=128) {
+    if (confirm("Do you want uppercase letters?") === true) {
+      password += uppercaseConfirm;
+    }
+    if (confirm("Do you want lower case letters?") === true) {
+      password += lowercaseConfirm;
+    }
+    if (confirm("Would you like to use any special characters?") === true) {
+      password += specialChars;
+    }
+  } else if (length < 8) {
+    alert("The length is too short.");
+    generatePassword();
+  } else if (length > 128) {
+    alert("The length is too long.");
+    generatePassword();
+  } else 
+    generatePassword();
+  alert("Length is not validated as a number.")
 }
 // Write password to the #password input
 function writePassword() {
