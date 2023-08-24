@@ -29,22 +29,27 @@ THEN the password is either displayed in an alert or written to the page
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var password = ["8 chars", ""]
 // var userInput = window.prompt("Enter You Password Below");
 
 function generatePassword() {
-  console.log("Hey! You clicked the button!")
-  // var password.length = 8; prompt("How many Charachters woould you like as your password?")
-// prompt user to click generate password for password criteria
+  confirm("Please use one uppercase, at least 8 characters and one symbol!");
+  var password = prompt("Enter you password below", "Enter password here");
 
-
-
+  if (password >=8 && password <= 128) {
+    alert = ("That password works");
+  console.log("That password works!");
+  } else {
+  alert = ("Please try a different password")
+  console.log("Try again")
+  }
 //
 
 //
 
 //
 
-  return;
+  return password;
 }
 // Write password to the #password input
 function writePassword() {
