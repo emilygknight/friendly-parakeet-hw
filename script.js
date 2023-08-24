@@ -65,7 +65,8 @@ function generatePassword() {
   }
 console.log(allpossibleChoices);
 
-// return password = allpossibleChoices[Math.floor(Math.random() * 60)];
+return password = allpossibleChoices[Math.floor(Math.random() * 60)];
+
 }
 
 // Write password to the #password input
