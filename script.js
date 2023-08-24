@@ -55,7 +55,7 @@ function generatePassword() {
     }
     if (specialChars) {
       allpossibleChoices = allpossibleChoices.concat(possibleChars);
-    } alert("We can create a password!")
+    } alert("We created a password!")
   } else if (passwordLength < 8) {
     alert("The length is too short.");
   } else if (passwordLength > 128) {
