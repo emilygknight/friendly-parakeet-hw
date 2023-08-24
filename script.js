@@ -35,7 +35,6 @@ var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P"
 var allpossibleChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","%","^","&","*"]
 
 // var userInput = window.prompt("Enter You Password Below");
-
 function generatePassword() {
   var password = "";
   var passwordLength = prompt("How long would you like your password to be?", "Must be between 8-128 Characters");
@@ -46,10 +45,6 @@ function generatePassword() {
   console.log(lowercaseConfirm);
   var specialChars = confirm("Would you like to use any special characters?");
   console.log(specialChars);
-
-  for (let i = 0; i < allpossibleChoices.length; i++) {
-    password += allpossibleChoices[i];
-  }
 
   if (passwordLength >=8 && passwordLength <=128) {
     if (uppercaseConfirm) {
