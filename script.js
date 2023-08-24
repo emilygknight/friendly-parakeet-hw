@@ -59,9 +59,11 @@ function generatePassword() {
   } else if (length > 128) {
     alert("The length is too long.");
     generatePassword();
-  } else 
+  } else {
     generatePassword();
   alert("Length is not validated as a number.")
+    generatePassword();
+  }
 }
 // Write password to the #password input
 function writePassword() {
