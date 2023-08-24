@@ -29,21 +29,22 @@ THEN the password is either displayed in an alert or written to the page
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-var passwordLength = (8,128);
+// var userInput = window.prompt("Enter You Password Below");
 
-debugger;
 function generatePassword() {
   console.log("Hey! You clicked the button!")
+  // var password.length = 8; prompt("How many Charachters woould you like as your password?")
+// prompt user to click generate password for password criteria
 
-// promt user to click generate password for password criteria
+
+
+//
 
 //
 
 //
 
-//
-
-  return password;
+  return;
 }
 // Write password to the #password input
 function writePassword() {
