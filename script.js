@@ -47,13 +47,13 @@ function generatePassword() {
   console.log(specialChars);
 
   if (passwordLength >=8 && passwordLength <=128) {
-    if (confirm("Do you want uppercase letters?") === true) {
+    if (uppercaseConfirm) {
       password += upperCase;
     }
-    if (confirm("Do you want lower case letters?") === true) {
+    if (lowercaseConfirm) {
       password += lowerCase;
     }
-    if (confirm("Would you like to use any special characters?") === true) {
+    if (specialChars) {
       password += possibleChars;
     }
   } else if (length < 8) {
