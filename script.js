@@ -63,6 +63,10 @@ function generatePassword() {
   } else {
   alert("Length is not validated as a number.")
   }
+var password = ""
+for (let i = 0; password.allpossibleChoices; i++) {
+  password += allpossibleChoices[i];
+}
 
 return password;
 }
