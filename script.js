@@ -32,7 +32,7 @@ var generateBtn = document.querySelector("#generate");
 var possibleChars = ["!","@","#","$","%","^","&","*"];
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var allpossibleChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","%","^","&","*"]
+var allpossibleChoices = []
 
 // var userInput = window.prompt("Enter You Password Below");
 function generatePassword() {
@@ -48,13 +48,13 @@ function generatePassword() {
 
   if (passwordLength >=8 && passwordLength <=128) {
     if (uppercaseConfirm) {
-      allpossibleChoices.concat(upperCase);
+      allpossibleChoices = allpossibleChoices.concat(upperCase);
     }
     if (lowercaseConfirm) {
-      allpossibleChoices.concat(lowerCase);
+      allpossibleChoices = allpossibleChoices.concat(lowerCase);
     }
     if (specialChars) {
-      allpossibleChoices.concat(lowerCase);
+      allpossibleChoices = allpossibleChoices.concat(lowerCase);
     }
   } else if (passwordLength < 8) {
     alert("The length is too short.");
@@ -63,10 +63,10 @@ function generatePassword() {
   } else {
   alert("Length is not validated as a number.")
   }
-var password = ""
-for (let i = 0; password.allpossibleChoices; i++) {
-  password += allpossibleChoices[i];
-}
+// for (let i = 0; allpossibleChoices; i++) {
+//   password += allpossibleChoices[i];
+// }
+console.log(allpossibleChoices);
 
 return password;
 }
