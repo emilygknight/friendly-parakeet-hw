@@ -29,29 +29,32 @@ THEN the password is either displayed in an alert or written to the page
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-var possibleChars = []
+var possibleChars = [];
+var lowerCase = [];
+var upperCase = [];
+
 // var userInput = window.prompt("Enter You Password Below");
 
 function generatePassword() {
-  var password = ""
+  var password = "";
   var passwordLength = prompt("How long would you like your password to be?");
   console.log(passwordLength);
   var uppercaseConfirm = confirm("Do you want uppercase letters?");
   console.log(uppercaseConfirm);
   var lowercaseConfirm = confirm("Do you want lower case letters?");
   console.log(lowercaseConfirm);
-  var specialChars = confirm("Would you like to use any special characters?")
+  var specialChars = confirm("Would you like to use any special characters?");
   console.log(specialChars);
 
   if (passwordLength >=8 && passwordLength <=128) {
     if (confirm("Do you want uppercase letters?") === true) {
-      password += uppercaseConfirm;
+      password += upperCase;
     }
     if (confirm("Do you want lower case letters?") === true) {
-      password += lowercaseConfirm;
+      password += lowerCase;
     }
     if (confirm("Would you like to use any special characters?") === true) {
-      password += specialChars;
+      password += possibleChars;
     }
   } else if (length < 8) {
     alert("The length is too short.");
