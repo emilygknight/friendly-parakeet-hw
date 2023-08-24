@@ -36,7 +36,7 @@ var allpossibleChoices = []
 
 // var userInput = window.prompt("Enter You Password Below");
 function generatePassword() {
-  var password = "";
+  var password = [];
   var passwordLength = prompt("How long would you like your password to be?", "Must be between 8-128 Characters");
   console.log(passwordLength + " Characters long");
   var uppercaseConfirm = confirm("Do you want uppercase letters?");
@@ -65,8 +65,9 @@ function generatePassword() {
   }
 console.log(allpossibleChoices);
 
-return password;
+// return password = allpossibleChoices[Math.floor(Math.random() * 60)];
 }
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
