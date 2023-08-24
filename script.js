@@ -54,7 +54,7 @@ function generatePassword() {
       allpossibleChoices = allpossibleChoices.concat(lowerCase);
     }
     if (specialChars) {
-      allpossibleChoices = allpossibleChoices.concat(lowerCase);
+      allpossibleChoices = allpossibleChoices.concat(possibleChars);
     }
   } else if (passwordLength < 8) {
     alert("The length is too short.");
@@ -63,9 +63,6 @@ function generatePassword() {
   } else {
   alert("Length is not validated as a number.")
   }
-// for (let i = 0; allpossibleChoices; i++) {
-//   password += allpossibleChoices[i];
-// }
 console.log(allpossibleChoices);
 
 return password;
