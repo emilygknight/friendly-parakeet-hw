@@ -55,17 +55,22 @@ function generatePassword() {
     }
     if (specialChars) {
       allpossibleChoices = allpossibleChoices.concat(possibleChars);
-    }
+    } alert("We can create a password!")
   } else if (passwordLength < 8) {
     alert("The length is too short.");
   } else if (passwordLength > 128) {
     alert("The length is too long.");
   } else {
-  alert("Length is not validated as a number.")
+  alert("Not Valid.")
   }
-console.log(allpossibleChoices);
 
-return password = allpossibleChoices[Math.floor(Math.random() * 60)];
+console.log(allpossibleChoices);
+for (var i = 0; i < passwordLength; i++) {
+  password.push(allpossibleChoices[Math.floor(Math.random() * allpossibleChoices.length)]);
+  console.log(password);
+}
+
+return password.join("")
 
 }
 
