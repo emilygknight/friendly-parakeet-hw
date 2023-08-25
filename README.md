@@ -6,8 +6,9 @@
 - Whenever you go through the prompts and choose what criteria you want, you will be provided with a password you can use. 
 
 ## Installation
-- 
+- https://emilygknight.github.io/friendly-parakeet-hw/
 
+## 
 ## Usage 
 - Generates a new password.
 - Click the generate password and follow the steps to a new password.
